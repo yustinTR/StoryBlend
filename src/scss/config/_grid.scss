@@ -1,0 +1,27 @@
+@import '/node_modules/bootstrap/scss/functions';
+@import '/node_modules/bootstrap/scss/mixins';
+@import '/node_modules/bootstrap/scss/variables';
+
+$grid-columns: 16;
+$grid-gutter-width: 2rem;
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1440px,
+);
+$container-max-widths: (
+  xxl: 1408px,
+);
+
+.container-fluid {
+  padding-left: 2.5vw !important;
+  padding-right: 2.5vw !important;
+
+  @include media-breakpoint-up(xxl) {
+    padding-left: 5vw !important;
+    padding-right: 5vw !important;
+  }
+}

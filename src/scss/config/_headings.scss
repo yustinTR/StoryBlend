@@ -1,0 +1,49 @@
+@import '/node_modules/bootstrap/scss/functions';
+@import '/node_modules/bootstrap/scss/mixins';
+@import '/node_modules/bootstrap/scss/variables';
+
+// Headings.
+// T-shirt sizes in class names based on figma design.
+
+.heading-xs {
+  font: var(--font-size-lg) / 120% var(--default-font);
+  letter-spacing: -0.02em;
+}
+
+.heading-sm {
+  font: var(--font-size-2xl) / 120% var(--default-font);
+  letter-spacing: -0.025em;
+}
+
+.heading-md {
+  font: var(--font-size-4xl) / 110% var(--default-font);
+  letter-spacing: -0.03em;
+}
+
+.heading-lg {
+  font: var(--font-size-6xl) / 110% var(--default-font);
+  letter-spacing: -0.035em;
+}
+
+.heading-xl {
+  font: var(--font-size-7xl) / 100% var(--default-font);
+  letter-spacing: -0.04em;
+}
+
+.heading-xxl {
+  font: 8vw / 100% var(--default-font);
+  letter-spacing: -0.045em;
+
+  @include media-breakpoint-down(md) {
+    font-size: 12vw;
+  }
+}
+
+.heading-xs,
+.heading-sm,
+.heading-md,
+.heading-lg,
+.heading-xl,
+.heading-xxl {
+  font-feature-settings: 'ss01' 1;
+}

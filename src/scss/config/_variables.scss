@@ -1,0 +1,33 @@
+// Spacers
+$spacer: 1;
+$spacer-3xs: calc($spacer / 8 * 1rem); // 2px
+$spacer-2xs: calc($spacer / 4 * 1rem); // 4px
+$spacer-xs: calc($spacer / 2 * 1rem); // 8px
+$spacer-sm: calc(($spacer / (4 / 3)) * 1rem); // 12px
+$spacer-md: calc($spacer * 1rem); // 16px
+$spacer-lg: calc($spacer * 1.5 * 1rem); // 24px
+$spacer-xl: calc($spacer * 2 * 1rem); // 32px
+$spacer-2xl: calc($spacer * 3 * 1rem); // 48px
+$spacer-3xl: calc($spacer * 4 * 1rem); // 64px
+$spacer-4xl: calc($spacer * 6 * 1rem); // 96px
+
+html {
+  --spacer-3xs: #{$spacer-3xs};
+  --spacer-2xs: #{$spacer-2xs};
+  --spacer-xs: #{$spacer-xs};
+  --spacer-sm: #{$spacer-sm};
+  --spacer-md: #{$spacer-md};
+  --spacer-lg: #{$spacer-lg};
+  --spacer-xl: #{$spacer-xl};
+  --spacer-2xl: #{$spacer-2xl};
+  --spacer-3xl: #{$spacer-3xl};
+  --spacer-4xl: #{$spacer-4xl};
+  --speed-4xl: 1s;
+  --speed-3xl: 0.6s;
+  --speed-2xl: 0.5s;
+  --speed-xl: 0.4s;
+  --speed-lg: 0.3s;
+  --speed-md: 0.2s;
+  --speed-sm: 0.1s;
+  --border-thin: 1px solid;
+}

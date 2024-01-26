@@ -1,0 +1,24 @@
+// From designs
+$paddings: padding-x-small $spacer-xs,
+  padding-small $spacer-md,
+  padding-medium $spacer-lg,
+  padding-default $spacer-xl,
+  padding-large $spacer-3xl,
+  padding-x-large $spacer-4xl;
+
+html {
+  @each $padding in $paddings {
+    --#{nth($padding, 1)}: #{nth($padding, 2)};
+  }
+}
+
+// Create top and bottom padding classes based on design values.
+@each $padding in $paddings {
+  .#{nth($padding, 1)}#{--top} {
+    padding-top: #{nth($padding, 2)};
+  }
+
+  .#{nth($padding, 1)}#{--bottom} {
+    padding-bottom: #{nth($padding, 2)};
+  }
+}

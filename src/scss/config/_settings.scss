@@ -1,0 +1,16 @@
+$spacer: 1rem;
+
+:root {
+  --spacer-0: #{$spacer * 0.25};
+  --spacer-1: #{$spacer * 0.5};
+  --spacer-2: #{$spacer * 0.75};
+  --spacer-3: #{$spacer};
+  --spacer-4: #{$spacer * 1.5};
+  --spacer-5: #{$spacer * 3};
+  --border-radius: 1.6rem;
+  --transition-all: all 0.5s;
+  --transition-transform: transform 0.5s ease;
+  --transition-opacity: opacity 0.5s ease;
+  --box-shadow: 0 6.5px 14.4px 0 rgb(0 0 0 / 13%),
+    0 1.2px 3.6px 0 rgb(0 0 0 / 10%);
+}

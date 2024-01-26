@@ -1,0 +1,124 @@
+// Color
+$primary-color: #ff8800; // drupal-yustin-starter-theme Orange
+$primary-variant-1-color: #e2c070;
+$primary-variant-2-color: #fadf58;
+$secondary-color: #bfbfff; // drupal-yustin-starter-theme Blue
+$secondary-variant-1-color: #94b1e0;
+$secondary-variant-2-color: #a8c7fa;
+$tertiary-color: #2e7350; // drupal-yustin-starter-theme Green
+$tertiary-variant-1-color: #c3b896;
+$tertiary-variant-2-color: #edd0a6;
+$quaternary-color: #c261f2; // drupal-yustin-starter-theme Purple
+$quaternary-variant-1-color: #d46038;
+$quaternary-variant-2-color: #eb7247;
+$quinary-color: #141414; // drupal-yustin-starter-theme Black
+
+$page-color: #ffffff;
+$primary-font-color: #28282a;
+$secondary-font-color: #ffffff;
+
+:root {
+  --primary-color: #{$primary-color};
+  --primary-variant-1-color: #{$primary-variant-1-color};
+  --primary-variant-2-color: #{$primary-variant-2-color};
+  --secondary-color: #{$secondary-color};
+  --secondary-variant-1-color: #{$secondary-variant-1-color};
+  --secondary-variant-2-color: #{$secondary-variant-2-color};
+  --tertiary-color: #{$tertiary-color};
+  --tertiary-variant-1-color: #{$tertiary-variant-1-color};
+  --tertiary-variant-2-color: #{$tertiary-variant-2-color};
+  --quaternary-color: #{$quaternary-color};
+  --quaternary-variant-1-color: #{$quaternary-variant-1-color};
+  --quaternary-variant-2-color: #{$quaternary-variant-2-color};
+  --quinary-color: #{$quinary-color};
+  --primary-font-color: #{$primary-font-color};
+  --secondary-font-color: #{$secondary-font-color};
+  --neutral-1-color: #fdf7f533;
+  --neutrals-neutral-50: #141414;
+  --neutrals-neutral-100: #162020;
+  --neutrals-neutral-200: #2b3535;
+  --neutrals-neutral-300: #404c4c;
+  --neutrals-neutral-400: #576464;
+  --neutrals-neutral-500: #707e7e;
+  --neutrals-neutral-600: #899898;
+  --neutrals-neutral-700: #a3b3b3;
+  --neutrals-neutral-800: #c1cccc;
+  --neutrals-neutral-900: #dfe5e5;
+  --neutrals-neutral-950: #eff2f2;
+  --neutrals-neutral-990: #fffbff;
+  --neutrals-white: #ffffff;
+  --neutrals-black: #000000;
+  --neutrals-surface-solid: #faefe7;
+  --neutrals-surface-opaque: #ebddd3;
+  --divider-dark: rgb(117 66 0 / 20%);
+}
+
+// Color themes
+.theme-black {
+  background-color: var(--quinary-color);
+  color: var(--secondary-font-color);
+
+  a {
+    color: var(--secondary-font-color);
+  }
+}
+
+.theme-orange {
+  background-color: var(--primary-color);
+  color: var(--primary-font-color);
+
+  &--variant-1 {
+    background-color: var(--primary-variant-1-color);
+    color: var(--secondary-font-color);
+  }
+
+  &--variant-2 {
+    background-color: var(--primary-variant-2-color);
+    color: var(--secondary-font-color);
+  }
+}
+
+.theme-blue {
+  background-color: var(--secondary-color);
+  color: var(--secondary-font-color);
+
+  &--variant-1 {
+    background-color: var(--secondary-variant-1-color);
+    color: var(--secondary-font-color);
+  }
+
+  &--variant-2 {
+    background-color: var(--secondary-variant-2-color);
+    color: var(--secondary-font-color);
+  }
+}
+
+.theme-green {
+  background-color: var(--tertiary-color);
+  color: var(--secondary-font-color);
+
+  &--variant-1 {
+    background-color: var(--tertiary-variant-1-color);
+    color: var(--secondary-font-color);
+  }
+
+  &--variant-2 {
+    background-color: var(--tertiary-variant-2-color);
+    color: var(--secondary-font-color);
+  }
+}
+
+.theme-red {
+  background-color: var(--quaternary-color);
+  color: var(--secondary-font-color);
+
+  &--variant-1 {
+    background-color: var(--quaternary-variant-1-color);
+    color: var(--secondary-font-color);
+  }
+
+  &--variant-2 {
+    background-color: var(--quaternary-variant-2-color);
+    color: var(--secondary-font-color);
+  }
+}

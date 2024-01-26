@@ -1,0 +1,18 @@
+.webform-confirmation {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: var(--spacer-4xl) 0;
+
+  &__image {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.webform-confirmation--newsbrief {
+  display: block;
+  margin: 0;
+}

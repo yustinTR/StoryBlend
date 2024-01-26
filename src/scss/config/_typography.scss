@@ -1,0 +1,91 @@
+$font-scale-factor: 1.1;
+
+html {
+  --default-font: new-hero, sans-serif;
+  --font-size-xs: 0.75rem; // 12
+  --font-size-sm: 0.875rem; // 14
+  --font-size-default: min(
+    max(1rem, calc(1.1vw * #{$font-scale-factor})),
+    1.25rem
+  ); // 16
+
+  --font-size-md: min(
+    max(1.25rem, calc(1.25vw * #{$font-scale-factor})),
+    1.5rem
+  ); // 20
+
+  --font-size-lg: min(
+    max(1.5rem, calc(1.5vw * #{$font-scale-factor})),
+    2rem
+  ); // 24
+
+  --font-size-xl: min(
+    max(1.75rem, calc(1.75vw * #{$font-scale-factor})),
+    2.25rem
+  ); // 28
+
+  --font-size-2xl: min(
+    max(2rem, calc(2vw * #{$font-scale-factor})),
+    4rem
+  ); // 32
+
+  --font-size-3xl: min(
+    max(2.5rem, calc(2.5vw * #{$font-scale-factor})),
+    3rem
+  ); // 40
+
+  --font-size-4xl: min(
+    max(3rem, calc(3vw * #{$font-scale-factor})),
+    3.5rem
+  ); // 48
+
+  --font-size-5xl: min(
+    max(3.5rem, calc(3.5vw * #{$font-scale-factor})),
+    4rem
+  ); // 56
+
+  --font-size-6xl: min(
+    max(4rem, calc(4vw * #{$font-scale-factor})),
+    5rem
+  ); // 64
+
+  --font-size-7xl: min(
+    max(6rem, calc(6vw * #{$font-scale-factor})),
+    8rem
+  ); // 96
+
+  --font-size-8xl: min(
+    max(8rem, calc(8vw * #{$font-scale-factor})),
+    10rem
+  ); // 144
+}
+
+body {
+  color: var(--primary-font-color);
+  font-family: var(--default-font);
+  font-feature-settings: 'ss01' 1;
+  font-size: var(--font-size-default);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  line-height: 1.5;
+  text-wrap: pretty;
+}
+
+strong {
+  font-weight: 600;
+}
+
+a {
+  color: inherit;
+  font-size: var(--font-size-default);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5; /* 1.5rem */
+  text-decoration-line: underline;
+
+  &:hover {
+    text-decoration: none;
+  }
+}

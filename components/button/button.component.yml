@@ -1,0 +1,43 @@
+$schema: https://git.drupalcode.org/project/sdc/-/raw/1.x/src/metadata.schema.json
+name: Button
+status: stable
+description: Link displayed as button.
+libraryDependencies:
+  - drupal-yustin-starter-theme/fontawesome
+props:
+  type: object
+  properties:
+    is_button:
+      type: boolean
+      title: 'Is Button'
+      examples:
+        - true
+    size:
+      type: string
+      title: Theme
+      examples:
+        - lg or sm
+    style:
+      type: string
+      title: Theme
+      examples:
+        - dark or light
+    variant:
+      type: string
+      title: Variant
+      examples:
+        - primary or secondary
+    label:
+      type: string
+      title: Label
+      examples:
+        - Button name
+    extra_classes:
+      type: string
+      title: Extra Classes
+      examples:
+        - class
+libraryOverrides:
+  css:
+    component:
+      ../../dist/button.css: { }

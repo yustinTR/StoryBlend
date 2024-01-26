@@ -1,0 +1,18 @@
+{%
+  set classes = [
+  'button',
+  variant ? 'button--' ~ variant,
+  size ? 'button--' ~ size,
+  style ? 'button--' ~ style,
+  is_active ? 'button--active',
+  extra_classes,
+]
+%}
+
+{% if label is  empty %}
+  {% set label = '' %}
+{% endif %}
+
+<{{ element ? element : 'a' }} class="{{ classes|join(" ") }}">
+    {{ label }}
+</{{ element ? element : 'a'}}>

@@ -1,0 +1,42 @@
+drupal-yustin-starter-theme.xs:
+  label: 'xs (min-width: 0)'
+  mediaQuery: 'all and (min-width: 0)'
+  weight: 0
+  multipliers:
+    - 1x
+    - 2x
+drupal-yustin-starter-theme.sm:
+  label: 'sm (min-width: 576px)'
+  mediaQuery: 'all and (min-width: 576px) and (max-width: 768px)'
+  weight: 1
+  multipliers:
+    - 1x
+    - 2x
+drupal-yustin-starter-theme.md:
+  label: 'md (min-width: 768px)'
+  mediaQuery: 'all and (min-width: 768px) and (max-width: 992px)'
+  weight: 2
+  multipliers:
+    - 1x
+    - 2x
+drupal-yustin-starter-theme.lg:
+  label: 'lg (min-width: 992px)'
+  mediaQuery: 'all and (min-width: 992px) and (max-width: 1200px)'
+  weight: 3
+  multipliers:
+    - 1x
+    - 2x
+drupal-yustin-starter-theme.xl:
+  label: 'xl (min-width: 1200px)'
+  mediaQuery: 'all and (min-width: 1200px) and (max-width: 1440px)'
+  weight: 4
+  multipliers:
+    - 1x
+    - 2x
+drupal-yustin-starter-theme.xxl:
+  label: 'xxl (min-width: 1440px)'
+  mediaQuery: 'all and (min-width: 1440px)'
+  weight: 5
+  multipliers:
+    - 1x
+    - 2x
