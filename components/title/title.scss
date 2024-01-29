@@ -1,0 +1,20 @@
+.title {
+  margin-bottom: var(--spacer-md);
+
+  &--detail {
+    color: var(--primary-font-color);
+    max-width: 64rem;
+  }
+
+  &--icon {
+    align-items: flex-start;
+    display: flex;
+    flex-shrink: 0;
+    gap: var(--padding-small);
+    padding-right: var(--padding-small);
+
+    span {
+      align-self: flex-end;
+    }
+  }
+}

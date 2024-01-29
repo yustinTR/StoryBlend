@@ -1,0 +1,50 @@
+title: Finalist/Atoms/Title
+tags: ['autodocs']
+argTypes:
+  type: object
+  properties:
+    element:
+      type: string
+      title: Element
+    icon:
+      type: string
+      title: Icon
+    title:
+      type: string
+      title: title
+    style:
+      type: string
+      title: Style
+    title_url:
+      type: string
+      title: Url
+    heading:
+      type: string
+      title: Heading
+    variant:
+      type: string
+      title: Variant
+    extra_classes:
+      type: string
+      title: Extra classes
+      examples:
+        - col-md-6 custom-class another-class
+stories:
+  - name: Title
+    args:
+      title: title
+      element: h1
+      heading: md
+      extra_classes: yourComponent__title
+    parameters:
+      docs:
+        source:
+          type: code
+          language: yaml
+          code: |
+            {% include 'yustintroost:title' with {
+              'title': 'Your title',
+              'heading': 'md',
+              'element': 'h1',
+              'extra_classes': 'yourComponent__title'
+            } %}

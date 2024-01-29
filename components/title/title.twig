@@ -1,0 +1,22 @@
+{% set classes = [
+  'title',
+  style ? 'title--' ~ style : "",
+  icon ? 'title-' ~ icon: "",
+  heading ? 'heading-' ~ heading: "",
+  variant ? 'title--' ~ variant: "",
+  extra_classes,
+]
+%}
+
+
+<{{ element ? element:'h2' }}  class="{{ classes|join(" ") }}">
+
+  {% if title_url %}
+    <a href={{ title_url }}>
+  {% endif %}
+  {{ title }}
+
+  {% if title_url %}
+    </a>
+  {% endif %}
+</{{ element ? element:'h2' }}>

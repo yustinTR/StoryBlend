@@ -9,13 +9,15 @@ import iife from "rollup-plugin-iife";
 // Add PostCSS plugins.
 import autoprefixer from 'autoprefixer';
 import cssnano from 'cssnano';
-import {join} from "node:path";
 
 // Add the sass requirements and add an optional overrides sass file if a custom
 // yml file exists for it.
 const sassIncludes = [
     '@use "sass:color";',
     '@use "sass:map";',
+    '@import "./node_modules/breakpoint-sass/stylesheets/_breakpoint.scss";',
+    '@import "./storybook/assets/scss/utils/_variables.scss";',
+    '@import "./storybook/assets/scss/utils/_mixins.scss";',
 ];
 
 // Define the vite build config.
@@ -24,7 +26,9 @@ export default {
         // Parse Twig files in JavaScript.
         twig({
             namespaces: {
-                components: join(__dirname, "../components"),
+                components: path.resolve(__dirname, './storybook/components/'),
+                elements: path.resolve(__dirname, './storybook/elements/'),
+                structures: path.resolve(__dirname, './storybook/structures/'),
             },
         }),
 
@@ -67,46 +71,43 @@ export default {
     build: {
         emptyOutDir: true,
         cssCodeSplit: true,
-        outDir: './dist/assets',
+        outDir: './assets',
         assetsDir: '',
         rollupOptions: {
-            input: {
-                // Add your existing entries
-                ...glob.sync(path.resolve(__dirname, './components/**/*.{js,scss}'), {
-                    ignore: [
-                        // Ignore the stories.
-                        path.resolve(__dirname, './components/**/*.stories.js'),
-                    ],
-                }).reduce((entries, filepath) => {
-                    // Remove the directory name from the filepath.
-                    let cleanPath = filepath.replace(__dirname, '');
-                    // Replaces "/scss" folder with "/css".
-                    cleanPath = cleanPath.replace(/(\/scss)/g, '/css');
-                    // Replaces the ".scss" extension with ".css" to prevent the
-                    // "Invalid loader value: scss" error.
-                    cleanPath = cleanPath.replace(/(\.scss)/g, '.css');
-                    // Remove the leading slash.
-                    cleanPath = cleanPath.replace(/^\//, '');
+            input: glob.sync(path.resolve(__dirname, './storybook/**/*.{js,scss}'), {
+                ignore: [
+                    // Ignore the stories.
+                    path.resolve(__dirname, './storybook/**/*.stories.js'),
+                    // Ignore the SASS utils.
+                    path.resolve(__dirname, './storybook/assets/scss/utils/**')
+                ],
+            }).reduce((entries, filepath) => {
+                // Remove the directory name from the filepath.
+                let cleanPath = filepath.replace(__dirname, '');
 
-                    entries[cleanPath] = filepath;
+                // Remove "storybook" folder from the path.
+                cleanPath = cleanPath.replace(/(\/storybook)/g, '');
+                // Remove "assets" folder from the path.
+                cleanPath = cleanPath.replace(/(\/assets)/g, '');
+                // Replaces "/scss" folder with "/css".
+                cleanPath = cleanPath.replace(/(\/scss)/g, '/css');
+                // Replaces the ".scss" extension with ".css" to prevent the
+                // "Invalid loader value: scss" error.
+                cleanPath = cleanPath.replace(/(\.scss)/g, '.css');
+                // Remove the leading slash.
+                cleanPath = cleanPath.replace(/^\//, '');
 
-                    return entries;
-                }, {}),
+                entries[cleanPath] = filepath;
 
-                // Add your additional entry points
-                'style': join(__dirname, 'src/scss/main.scss'),
-                'main.js': join(__dirname, 'src/js/main.js'),
-            },
+                return entries;
+            }, {}),
             output: {
                 entryFileNames: (entry) => {
                     // Remove the hash for the build files.
                     return entry.name;
                 },
-                assetFileNames: '[name].css',
-
             },
             plugins: [iife()],
         },
-
     },
 };

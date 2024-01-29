@@ -1,0 +1,39 @@
+$schema: https://git.drupalcode.org/project/sdc/-/raw/1.x/src/metadata.schema.json
+name: Title
+status: stable
+description: Basic title component.
+props:
+  type: object
+  required:
+    - title
+  properties:
+    element:
+      type: string
+      title: Element
+    icon:
+      type: string
+      title: Icon
+    title:
+      type: string
+      title: title
+    style:
+      type: string
+      title: Style
+    title_url:
+      type: string
+      title: Url
+    heading:
+      type: string
+      title: Heading
+    variant:
+      type: string
+      title: Variant
+    extra_classes:
+      type: string
+      title: Extra classes
+      examples:
+        - col-md-6 custom-class another-class
+libraryOverrides:
+  css:
+    component:
+      ../../dist/title.css: { }
