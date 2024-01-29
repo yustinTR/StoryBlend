@@ -1,8 +1,12 @@
 /** @type { import('@storybook/html').Preview } */
 import '../dist/assets/style.css';
+import StoryBlend from './StoryBlend';
 
 const preview = {
   parameters: {
+    docs: {
+      theme: StoryBlend,
+    },
     actions: { argTypesRegex: "^on[A-Z].*" },
     controls: {
       matchers: {
