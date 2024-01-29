@@ -3,7 +3,7 @@ name: Button
 status: stable
 description: Link displayed as button.
 libraryDependencies:
-  - drupal-yustin-starter-theme/fontawesome
+  -StoryBlend/fontawesome
 props:
   type: object
   properties:

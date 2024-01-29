@@ -1,0 +1,22 @@
+name: StoryBlend
+type: theme
+base theme: false
+core_version_requirement: ^10
+description: Introducing "StoryBlend" - A cutting-edge Drupal starter theme seamlessly integrated with Storybook. Designed for developers and themers seeking a streamlined and efficient way to build and showcase their Drupal themes, StoryBlend combines the robustness of Drupal with the interactive component-driven development provided by Storybook.
+author: Yustin Troost
+'interface translation project': StoryBlend
+'interface translation server pattern': 'themes/custom/%project/translations/%project.%language.po'
+
+regions:
+  header: 'Header'
+  primary_menu: 'Primary menu'
+  secondary_menu: 'Secondary menu'
+  highlighted: 'Highlighted'
+  facets: 'Facets'
+  content: 'Content'
+  sidebar: 'Sidebar'
+  footer: 'Footer'
+  breadcrumb: 'Breadcrumb'
+
+libraries:
+  - StoryBlend/StoryBlend
