@@ -19,9 +19,8 @@ Install dependencies:
 
 Start Storybook to preview and develop your theme components:
 
-bash
 
-npm run storybook
+    npm run storybook
 
 Visit http://localhost:6006/ in your browser to view the Storybook.
 
@@ -29,9 +28,8 @@ Visit http://localhost:6006/ in your browser to view the Storybook.
 
 Compile and build your Drupal theme using the following command:
 
-bash
 
-npm run dev/build
+    npm run dev/build
 
 This command will process your CSS files following the BEM methodology, ensuring modularity and maintainability.
 <h2>BEM Methodology</h2>
