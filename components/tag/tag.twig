@@ -1,0 +1,12 @@
+{% set classes = [
+  'tag',
+  variant ? 'tag--' ~ variant : '',
+  size ? 'tag--' ~ size : '',
+  extra_classes,
+]
+%}
+
+
+<{{ element ? element : 'span' }} class="{{ classes|join(" ") }}">
+{{ label }}
+</{{ element ? element : 'span'}}>

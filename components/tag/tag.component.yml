@@ -1,0 +1,25 @@
+$schema: https://git.drupalcode.org/project/sdc/-/raw/1.x/src/metadata.schema.json
+name: Tag
+status: stable
+props:
+  type: object
+  properties:
+    label:
+      type: string
+      title: Label
+      examples:
+        - Tag name
+    variant:
+      type: string
+      title: Variant
+      examples:
+        - primary or secondary
+    extra_classes:
+      type: string
+      title: Extra Classes
+      examples:
+        - class
+libraryOverrides:
+  css:
+    component:
+      ../../dist/assets/components/tag/tag.css: { }

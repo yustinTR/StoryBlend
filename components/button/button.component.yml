@@ -40,4 +40,4 @@ props:
 libraryOverrides:
   css:
     component:
-      ../../dist/button.css: { }
+      ../../dist/assets/components/button.css: { }
