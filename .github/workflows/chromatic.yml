@@ -13,7 +13,9 @@ jobs:
 
       - name: Install dependencies
         # ⚠️ Pick one of these, matching the package manager for your project
-        run: npm ci
+        run:
+          npm run build
+          npm ci
 
       - name: Publish to Chromatic
         uses: chromaui/action@latest
