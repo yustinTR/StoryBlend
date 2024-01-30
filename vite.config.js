@@ -94,8 +94,8 @@ export default {
                 }, {}),
 
                 // Add your additional entry points
-                'style': join(__dirname, 'src/scss/main.scss'),
-                'main.js': join(__dirname, 'src/js/main.js'),
+                'style': join(__dirname, '/src/scss/main.scss'),
+                'main.js': join(__dirname, '/src/js/main.js'),
             },
             output: {
                 entryFileNames: (entry) => {
