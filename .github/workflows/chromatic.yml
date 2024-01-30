@@ -11,10 +11,14 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Build
+        run:
+          npm i
+          npm run build
+
       - name: Install dependencies
         # ⚠️ Pick one of these, matching the package manager for your project
         run:
-          npm run build
           npm ci
 
       - name: Publish to Chromatic
