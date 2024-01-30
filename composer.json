@@ -1,0 +1,19 @@
+{
+    "name": "yustintr/storyblend",
+    "type": "storyblend",
+    "description": "StoryBlend Base Theme for drupal x storybook",
+    "keywords": ["Drupal", "StoryBlend", "Base Theme"],
+    "license": "GPL-2.0+",
+    "autoload": {
+        "classmap": [
+            "includes/install/ScriptHandler.php"
+        ]
+    },
+    "scripts": {
+        "create-theme": [
+            "@clearDevData",
+            "Drupal\\StoryBlend\\ScriptHandler::createTheme"
+        ],
+        "clearDevData": "rm -rf dist/* && rm -rf node_modules/*"
+    }
+}

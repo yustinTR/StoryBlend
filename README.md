@@ -32,6 +32,13 @@ Compile and build your Drupal theme using the following command:
     npm run dev/build
 
 This command will process your CSS files following the BEM methodology, ensuring modularity and maintainability.
+
+<h2>Create theme</h2>
+
+To create a custom theme from this bases you can run the command ``` composer create-theme <themename> ```
+from the StoryBlend folder. This will create the theme in the themes/custom folder.
+The <themename> argument is optional. When omitted the theme will be called StoryBlend.
+
 <h2>BEM Methodology</h2>
 
 The CSS in StoryBlend is written following the BEM (Block Element Modifier) methodology. BEM is a naming convention that helps create clear and maintainable code. Here's a brief overview:
