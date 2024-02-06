@@ -1,3 +1,9 @@
+// Twig file.
+import tag from './tag.twig';
+
+// CSS file.
+import './tag.scss';
+
 export default {
   title: 'Components/Tag',
   parameters: {
@@ -6,16 +12,8 @@ export default {
   tags: ['autodocs'],
 };
 
-// Twig file.
-import tag from "./tag.twig";
-
-// CSS file.
-import './tag.scss';
-
-
-export const Tag = () => (
+export const Tag = () =>
   tag({
     label: 'Lorem ipsum!',
-    element: 'span'
-  })
-);
+    element: 'span',
+  });
