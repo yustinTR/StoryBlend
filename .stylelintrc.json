@@ -1,0 +1,32 @@
+{
+  "extends": [
+    "stylelint-config-standard-scss",
+    "stylelint-config-recommended-scss"
+  ],
+  "plugins": [
+    "stylelint-scss",
+    "stylelint-order",
+    "stylelint-prettier"
+  ],
+  "rules": {
+    "color-hex-length": "long",
+    "selector-pseudo-element-colon-notation": "single",
+    "selector-class-pattern": null,
+    "declaration-block-no-redundant-longhand-properties": [
+      true,
+      {
+        "ignoreShorthands": ["/grid/"]
+      }
+    ],
+    "scss/no-global-function-names": null,
+    "scss/at-extend-no-missing-placeholder": null,
+    "order/properties-alphabetical-order": true,
+    "font-family-no-missing-generic-family-keyword": [
+      true,
+      {
+        "ignoreFontFamilies": ["custom-icons"]
+      }
+    ],
+    "prettier/prettier": true
+  }
+}

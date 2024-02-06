@@ -22,4 +22,4 @@ props:
 libraryOverrides:
   css:
     component:
-      ../../dist/assets/components/tag/tag.css: { }
+      ../../dist/components/tag/tag.css: { }

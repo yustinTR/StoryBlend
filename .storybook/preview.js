@@ -1,5 +1,5 @@
 /** @type { import('@storybook/html').Preview } */
-import '../dist/assets/style.css';
+import '../dist/main.css';
 import StoryBlend from './StoryBlend';
 
 const preview = {

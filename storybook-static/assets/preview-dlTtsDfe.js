@@ -1,0 +1,1 @@
+import{c as e}from"./chunk-ZGA76URP-PfrU0Dmb.js";const r=e({base:"light",brandTitle:"StoryBlend",brandImage:"/logo_transparent.svg",brandTarget:"_self"}),t={parameters:{docs:{theme:r},actions:{argTypesRegex:"^on[A-Z].*"},controls:{matchers:{color:/(background|color)$/i,date:/Date$/i}}}};export{t as default};
