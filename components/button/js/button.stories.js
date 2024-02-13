@@ -1,8 +1,8 @@
 // Twig file.
-import button from './button.twig';
+import button from '../button.twig';
 
 // CSS file.
-import './button.scss';
+import '../scss/button.scss';
 
 export default {
   title: 'Components/Button',

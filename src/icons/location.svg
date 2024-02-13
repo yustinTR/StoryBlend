@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Icon/Location</title>
+    <g id="Icon/Location" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M16,5 C20.418278,5 24,8.581722 24,13 C24,15.9455187 21.3333333,20.6121853 16,27 C10.6666667,20.6121853 8,15.9455187 8,13 C8,8.581722 11.581722,5 16,5 Z M16,10 C14.3431458,10 13,11.3431458 13,13 C13,14.6568542 14.3431458,16 16,16 C17.6568542,16 19,14.6568542 19,13 C19,11.3431458 17.6568542,10 16,10 Z" id="Combined-Shape" fill="#280F4B"></path>
+    </g>
+</svg>

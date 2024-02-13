@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Icon/Inpage navigation</title>
+    <g id="Icon/Inpage-navigation" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M16,8 L28,8 L28,11 L16,11 L16,8 Z M16,14.5 L28,14.5 L28,17.5 L16,17.5 L16,14.5 Z M16,21 L28,21 L28,24 L16,24 L16,21 Z" id="Shape" fill="#280F4B"></path>
+        <polygon id="Path" fill="#280F4B" points="10.5 8 10.499 19.001 13 16.5 15 18.5 9 24.5 3 18.5 5 16.5 7.499 18.999 7.5 8"></polygon>
+    </g>
+</svg>
