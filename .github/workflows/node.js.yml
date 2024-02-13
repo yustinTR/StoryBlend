@@ -12,7 +12,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [14] # Adjust the Node.js version as needed
+        node-version: [18.14] # Adjust the Node.js version as needed
 
     steps:
     - uses: actions/checkout@v3
