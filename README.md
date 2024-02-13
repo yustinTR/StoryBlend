@@ -5,6 +5,11 @@ Getting Started
 
 <h2>To get started with StoryBlend, follow these steps:</h2>
 
+  Use StoryBlend:
+
+    composer require yustintr/storyblend
+    
+
   Clone the repository:
 
     git clone  git@github.com:yustinTR/StoryBlend.git
