@@ -1,23 +1,18 @@
-# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
-
 name: Node.js CI
 
 on:
   push:
-    branches: [ "0.1.x" ]
+    branches: ["0.1.x"]
   pull_request:
-    branches: [ "0.1.x" ]
+    branches: ["0.1.x"]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     strategy:
       matrix:
-        node-version: [18.14]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+        node-version: [14] # Adjust the Node.js version as needed
 
     steps:
     - uses: actions/checkout@v3
@@ -25,6 +20,27 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-    - run: npm i
+
+    # Cache npm dependencies and the dist folder
+    - name: Cache dependencies
+      uses: actions/cache@v2
+      with:
+        path: |
+          node_modules
+          dist
+        key: ${{ runner.os }}-node-${{ hashFiles('**/*.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-node-
+
+    - run: npm ci
+
+    # Run build script
     - run: npm run build --if-present
+
+    # Save dist folder and clean up node_modules
+    - name: Save dist folder and clean up node_modules
+      run: |
+        mkdir -p ${{ runner.workspace }}/dist_backup
+        mv dist ${{ runner.workspace }}/dist_backup
+        rm -rf node_modules
+        mv ${{ runner.workspace }}/dist_backup dist
