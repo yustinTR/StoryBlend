@@ -2,7 +2,7 @@
     "name": "yustintr/storyblend",
     "description": "StoryBlend Base Theme for Drupal x Storybook",
     "type": "drupal-theme",
-    "license": "GPL-2.0+",
+    "license": "GPL-2.0-or-later",
     "authors": [
         {
             "name": "Yustin Troost",
