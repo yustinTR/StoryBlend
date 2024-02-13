@@ -1,19 +1,21 @@
 {
     "name": "yustintr/storyblend",
-    "type": "storyblend",
-    "description": "StoryBlend Base Theme for drupal x storybook",
-    "keywords": ["Drupal", "StoryBlend", "Base Theme"],
+    "description": "StoryBlend Base Theme for Drupal x Storybook",
+    "type": "drupal-theme",
     "license": "GPL-2.0+",
-    "autoload": {
-        "classmap": [
-            "includes/install/ScriptHandler.php"
-        ]
+    "authors": [
+        {
+            "name": "Yustin Troost",
+            "email": "yustin.troost@finalist.nl"
+        }
+    ],
+    "extra": {
+        "installer-paths": {
+            "web/themes/{$name}/": ["type:drupal-theme"]
+        }
     },
-    "scripts": {
-        "create-theme": [
-            "@clearDevData",
-            "Drupal\\StoryBlend\\ScriptHandler::createTheme"
-        ],
-        "clearDevData": "rm -rf dist/* && rm -rf node_modules/*"
+    "minimum-stability": "dev",
+    "require": {
+        "yustintr/storyblend": "dev-master"
     }
 }
