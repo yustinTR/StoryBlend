@@ -36,11 +36,20 @@ jobs:
 
     # Run build script
     - run: npm run build --if-present
+    # 👇 Store the dist folder
+    - uses: actions/upload-artifact@v3
+      with:
+        name: app-build
+        path: dist
 
-    # Save dist folder and clean up node_modules
-    - name: Save dist folder and clean up node_modules
-      run: |
-        mkdir -p ${{ runner.workspace }}/dist_backup
-        mv dist ${{ runner.workspace }}/dist_backup
-        rm -rf node_modules
-        mv ${{ runner.workspace }}/dist_backup dist
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: [build]
+    steps:
+      # 👇 Get the dist folder
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: app-build
+      - run: ls dist
