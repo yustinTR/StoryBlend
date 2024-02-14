@@ -8,15 +8,26 @@ export default {
   title: 'Components/Button',
   parameters: {
     layout: 'centered',
-  },
-  tags: ['autodocs'],
-  argTypes: {
-    label: {
-      default: 'text',
-      control: 'text',
-      description: 'Text fot the button',
+    docs: {
+      source: {
+        type: 'code',
+        language: 'yaml',
+        code: `
+          {% include 'finalist:button' with {
+            'label': button_text,
+            'button_url': button_link,
+            'is_button': true,
+            'size': lg,
+            'style': dark,
+            'variant': 'secondary',
+            'icon_after': 'arrow-right',
+            'extra_classes': 'extra clases'
+          } %}
+        `,
+      },
     },
   },
+  tags: ['autodocs'],
 };
 
 export const Button = () =>
