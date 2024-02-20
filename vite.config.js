@@ -2,7 +2,7 @@ import { defineConfig } from 'vite';
 import multiInput from 'rollup-plugin-multi-input';
 import styleLint from 'vite-plugin-stylelint';
 import eslintPlugin from 'vite-plugin-eslint';
-import viteSvgToWebfont from 'vite-svg-2-webfont';
+import vitePluginSVGToFont from '@sumsolution/vite-plugin-svg-to-font'
 
 import autoprefixer from 'autoprefixer';
 import cssnano from 'cssnano';
@@ -25,8 +25,8 @@ export default defineConfig({
       exclude: ['/virtual:/**', 'node_modules/**'],
       fix: true,
     }),
-    viteSvgToWebfont({
-      context: resolve(__dirname, 'src/icons'),
+    vitePluginSVGToFont({
+      svgPath: resolve(__dirname, 'src/icons'),
     }),
     multiInput.default(),
   ],

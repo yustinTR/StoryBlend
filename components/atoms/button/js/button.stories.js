@@ -1,7 +1,7 @@
 // Twig file.
 import button from '../button.twig';
 
-// CSS file.
+// SCSS file.
 import '../scss/button.scss';
 
 export default {

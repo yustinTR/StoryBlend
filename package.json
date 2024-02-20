@@ -13,7 +13,6 @@
     "chromatic": "npx chromatic --project-token=chpt_505f89ef74a4256"
   },
   "devDependencies": {
-    "@daipeng7/rollup-plugin-iconfont": "^2.0.0",
     "@fortawesome/fontawesome-free": "^6.4.0",
     "@storybook/addon-essentials": "^7.6.10",
     "@storybook/addon-interactions": "^7.6.10",
@@ -24,6 +23,7 @@
     "@storybook/manager-api": "^7.6.10",
     "@storybook/test": "^7.6.10",
     "@storybook/theming": "^7.6.10",
+    "@sumsolution/vite-plugin-svg-to-font": "^1.0.3",
     "autoprefixer": "^10.4.17",
     "bootstrap": "^5.2.3",
     "chromatic": "^10.6.1",
@@ -50,8 +50,7 @@
     "vite-plugin-linter": "^2.1.1",
     "vite-plugin-sass-glob-import": "^3.0.2",
     "vite-plugin-stylelint": "^5.3.1",
-    "vite-plugin-twig-drupal": "^1.2.0",
-    "vite-svg-2-webfont": "^2.0.0"
+    "vite-plugin-twig-drupal": "^1.2.0"
   },
   "dependencies": {
     "@fontsource/lato": "^5.0.18",

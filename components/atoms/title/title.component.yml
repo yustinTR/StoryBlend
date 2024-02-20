@@ -1,5 +1,5 @@
 $schema: https://git.drupalcode.org/project/sdc/-/raw/1.x/src/metadata.schema.json
-name: Title
+name: title
 status: stable
 description: Basic title component.
 props:

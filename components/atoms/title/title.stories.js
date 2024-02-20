@@ -2,7 +2,7 @@
 import title from './title.twig';
 
 // CSS file.
-import './title.scss';
+import './style.scss';
 
 export default {
   title: 'Components/Title',
